@@ -21,6 +21,7 @@ namespace FogMod
         {
             base.OnInitializeMelon();
 
+            main = MelonPreferences.CreateCategory("Fog Mod");
             fogColor = main.CreateEntry<Color>("col", new Color(0, 0, 0), "Color");
         }
 
