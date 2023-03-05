@@ -14,6 +14,16 @@ namespace FogMod
         bool setDarknessSettings;
         int currentScene;
 
+        public MelonPreferences_Category main;
+        public MelonPreferences_Entry<Color> fogColor;
+
+        public override void OnInitializeMelon()
+        {
+            base.OnInitializeMelon();
+
+            fogColor = main.CreateEntry<Color>("col", new Color(0, 0, 0), "Color");
+        }
+
         public override void OnSceneWasLoaded(int buildIndex, string sceneName)
         {
             currentScene = buildIndex;
