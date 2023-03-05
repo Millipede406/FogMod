@@ -31,6 +31,7 @@ namespace FogMod
                         Color darknessColor = new Color(0, 0, 0);
                         DarknessSettings settings = new DarknessSettings(darknessColor, 1, 1);
                         DarknessSettings.Light = settings;
+                        setDarknessSettings = true;
                     }
                 }
             }
