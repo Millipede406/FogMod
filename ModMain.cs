@@ -29,8 +29,10 @@ namespace FogMod
                     if (!PatchQuest.Views.MainMenu.Instance.IsOpen)
                     {
                         Color darknessColor = new Color(0, 0, 0);
-                        DarknessSettings settings = new DarknessSettings(darknessColor, 1, 1);
-                        DarknessSettings.Light = settings;
+                        Darkness.Color = darknessColor;
+                        Darkness.Distortion = 1;
+                        Darkness.Alpha = 1;
+                        Darkness.Intensity = 1;
                     }
                 }
             }
