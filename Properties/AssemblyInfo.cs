@@ -40,5 +40,5 @@ using System;
 
 [assembly: MelonColor(ConsoleColor.DarkRed)]
 [assembly: MelonAuthorColor(ConsoleColor.Magenta)]
-[assembly: MelonInfo(typeof(ModMain), "Fog Mod", "v1.0.0.2", "MillimediaGames")]
+[assembly: MelonInfo(typeof(ModMain), "Fog Mod", "1.1.0", "MillimediaGames")]
 [assembly: MelonGame("Lychee Game Labs", "Patch Quest")]
