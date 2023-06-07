@@ -11,7 +11,6 @@ namespace FogMod
 {
     public class ModMain : MelonMod
     {
-        bool setDarknessSettings;
         int currentScene;
 
         public MelonPreferences_Category main;
@@ -31,17 +30,14 @@ namespace FogMod
         }
         public override void OnUpdate()
         {
-            base.OnUpdate();
-
-            if(currentScene == 1)
+            if(currentScene == 0)
             {
-                if (!setDarknessSettings)
-                {
-                    Color darknessColor = fogColor.Value;
-                    DarknessSettings settings = new DarknessSettings(darknessColor, 1, 1);
-                    DarknessSettings.Light = settings;
-                }
+                return;
             }
+
+            Color darknessColor = fogColor.Value;
+            DarknessSettings settings = new DarknessSettings(darknessColor, 1, 1);
+            DarknessSettings.Light = settings;
         }
     }
 }
