@@ -37,12 +37,9 @@ namespace FogMod
             {
                 if (!setDarknessSettings)
                 {
-                    if (!PatchQuest.Views.MainMenu.Instance.IsOpen)
-                    {
-                        Color darknessColor = new Color(0, 0, 0);
-                        DarknessSettings settings = new DarknessSettings(darknessColor, 1, 1);
-                        DarknessSettings.Light = settings;
-                    }
+                    Color darknessColor = fogColor.Value;
+                    DarknessSettings settings = new DarknessSettings(darknessColor, 1, 1);
+                    DarknessSettings.Light = settings;
                 }
             }
         }
