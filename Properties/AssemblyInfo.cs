@@ -35,10 +35,10 @@ using System;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.1.0.0")]
+[assembly: AssemblyFileVersion("1.1.0.0")]
 
 [assembly: MelonColor(ConsoleColor.DarkRed)]
 [assembly: MelonAuthorColor(ConsoleColor.Magenta)]
-[assembly: MelonInfo(typeof(ModMain), "Fog Mod", "v1.1", "MillimediaGames")]
+[assembly: MelonInfo(typeof(ModMain), "Fog Mod", "1.1.0", "MillimediaGames")]
 [assembly: MelonGame("Lychee Game Labs", "Patch Quest")]
