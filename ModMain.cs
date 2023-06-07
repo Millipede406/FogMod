@@ -14,6 +14,17 @@ namespace FogMod
         bool setDarknessSettings;
         int currentScene;
 
+        public MelonPreferences_Category main;
+        public MelonPreferences_Entry<Color> fogColor;
+
+        public override void OnInitializeMelon()
+        {
+            base.OnInitializeMelon();
+
+            main = MelonPreferences.CreateCategory("Fog Mod");
+            fogColor = main.CreateEntry<Color>("col", new Color(0, 0, 0), "Color");
+        }
+
         public override void OnSceneWasLoaded(int buildIndex, string sceneName)
         {
             currentScene = buildIndex;
@@ -26,14 +37,9 @@ namespace FogMod
             {
                 if (!setDarknessSettings)
                 {
-                    if (!PatchQuest.Views.MainMenu.Instance.IsOpen)
-                    {
-                        Color darknessColor = new Color(0, 0, 0);
-                        Darkness.Color = darknessColor;
-                        Darkness.Distortion = 1;
-                        Darkness.Alpha = 1;
-                        Darkness.Intensity = 1;
-                    }
+                    Color darknessColor = fogColor.Value;
+                    DarknessSettings settings = new DarknessSettings(darknessColor, 1, 1);
+                    DarknessSettings.Light = settings;
                 }
             }
         }
